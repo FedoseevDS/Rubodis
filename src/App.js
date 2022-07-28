@@ -25,8 +25,11 @@ function App() {
           <Route path="props/fourOptions" element={<PropsChannel1 />} />
           <Route path="props/children" element={<Children />} />
           <Route path='classname' element={<Classname />} />
+          <Route path='scss' element={<SCSS />} />
+          <Route path='scss/textdiv' element={<divTextCnannel1 />}
           {/* element - ссылка на функию внутри */}
           <Route path='Array' element={<ArrayChannel1 />} />
+
 
         </Route>
       </Routes>

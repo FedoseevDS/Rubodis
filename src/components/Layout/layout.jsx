@@ -16,6 +16,15 @@ const Layout = () => {
       </header>
       <nav className='navbar'>
         <NavLink to="/" className={setActive}>Home</NavLink> 
+        <NavLink to="react" className={setActive}>React
+          <div>
+            <NavLink to="react/modules" className={setActive}>Модули
+          <div>
+            <NavLink to="react/modules/create-react-app" className={setActive}>Установка React</NavLink>
+          </div>
+          </NavLink>
+          </div>
+        </NavLink>
         <NavLink to="/props" className={setActive} onClick={toggle}>Props 
           {state && (
             <div className="dropDownProps">
@@ -25,15 +34,6 @@ const Layout = () => {
         </NavLink>
         <NavLink to='classname' className={setActive}>Classname</NavLink>
         <NavLink to='/array' className={setActive}>Array</NavLink>
-        
-        
-        {/* <NavLink to="/" style={({isActive}) => ({color: isActive ? 'var(--color-active)' : 'white'})}>Home</NavLink> - Вариант № 3
-        <NavLink to="/posts" style={({isActive}) => ({color: isActive ? 'var(--color-active)' : 'white'})}>Blog</NavLink> 
-        <NavLink to="/about" style={({isActive}) => ({color: isActive ? 'var(--color-active)' : 'white'})}>About</NavLink> */}
-
-        {/* <NavLink to="/" className={({isActive}) => isActive ? 'active-link' : '' }> Home</NavLink> - Вариант № 1
-        <NavLink to="/posts" className={({isActive}) => isActive ? 'active-link' : '' }>Blog</NavLink> 
-        <NavLink to="/about" className={({isActive}) => isActive ? 'active-link' : '' }>About</NavLink> */}
       </nav>
       <div className='content'>
       <Outlet /> {/* отображается контент страниц при переходе */}

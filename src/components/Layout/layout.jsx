@@ -6,8 +6,14 @@ const setActive = ({isActive}) => isActive ? 'active' : '';
 
 const Layout = () => {
 
-  const [state, setState] = useState(false)
-  const toggle = () => {setState(!state)}
+  const [isState, setIsState] = useState(false)
+  const toggle = () => {setIsState(!isState)}
+
+  const [isState2, setIsState2] = useState(false)
+  const toggle2 = () => {setIsState2(!isState2)}
+
+  const [isState3, setIsState3] = useState(false)
+  const toggle3 = () => {setIsState3(!isState3)}
 
   return (
     <div className="common">
@@ -16,24 +22,29 @@ const Layout = () => {
       </header>
       <nav className='navbar'>
         <NavLink to="/" className={setActive}>Home</NavLink> 
-        <NavLink to="react" className={setActive}>React
-          <div>
-            <NavLink to="react/modules" className={setActive}>Модули
-          <div>
-            <NavLink to="react/modules/create-react-app" className={setActive}>Установка React</NavLink>
-          </div>
-          </NavLink>
-          </div>
+        <NavLink to="react" className={setActive} onClick={toggle3}>React
+        {isState3 && (
+            <div className="animation">
+              <NavLink to='/react/animation' className={setActive}>Анимация</NavLink>
+            </div>)}
         </NavLink>
         <NavLink to="/props" className={setActive} onClick={toggle}>Props 
-          {state && (
-            <div className="dropDownProps">
+          {isState && (
+            <div className="props">
             <NavLink to='/props/fourOptions' className={setActive}>4 способа</NavLink>
             <NavLink to='/props/children' className={setActive}>Children</NavLink>
             </div>)}
         </NavLink>
         <NavLink to='classname' className={setActive}>Classname</NavLink>
-        <NavLink to='/array' className={setActive}>Array</NavLink>
+        <NavLink to='array' className={setActive}>Array</NavLink>
+        <NavLink to='scss' className={setActive} onClick={toggle2}>SCSS
+        {isState2 && (
+            <div className="transition">
+            <NavLink to='scss/transition' className={setActive} >Transition</NavLink>
+            <NavLink to='scss/animation' className={setActive} >Animation</NavLink>
+
+            </div>)}
+        </NavLink>
       </nav>
       <div className='content'>
       <Outlet /> {/* отображается контент страниц при переходе */}

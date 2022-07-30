@@ -36,7 +36,19 @@ a {
     }
 }   
 
-.dropDownProps {
+.animation {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.props {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.transition {
     display: flex;
     flex-direction: column;
     padding-left: 20px;
@@ -46,4 +58,5 @@ a {
     grid-area: c3;
     padding: 20px;
 }
+
 

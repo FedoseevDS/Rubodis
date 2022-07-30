@@ -1,0 +1,198 @@
+.transitionChannel1 {
+    display: flex;
+    flex-direction: column;
+    & > div {
+        margin-top: 20px;
+        font-weight: 700;
+        color: #333333;
+    }
+    p {
+        font-weight: 400;
+    }
+}
+
+.duration {
+    text-decoration: none;
+    display: inline-block;
+    line-height: 60px;
+    padding: 0 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 18px;
+    border-radius: 10px;
+    top: 0;
+    position: relative;
+}
+
+.button1 {
+    color: #fff;
+    margin-bottom: 20px;
+    background-color: #5e5373;
+    box-shadow: 0 5px 0px #3c354a;
+    transition-duration: 2s;
+    &:hover {
+        top:2px;
+        box-shadow: 0 3px 0px #3c354a;
+        background-color: #18b5a4;
+    }
+}
+
+.button2 {
+    color: #fff;
+    margin-bottom: 20px;
+    background-color: #5e5373;
+    box-shadow: 0 5px 0px #3c354a;
+    transition-duration: 0.5s, 100ms;
+    // transition-property: all; стили transition-duration применяются ко всем свойствам
+    // transition-property: background-color; стили transition-duration применяются к свойтсву background-color
+    transition-property: background-color, top;
+    &:hover {
+        top:2px;
+        box-shadow: 0 3px 0px #3c354a;
+        background-color: #18b5a4;
+    }
+}
+
+.button3 {
+    color: #fff;
+    margin-bottom: 20px;
+    background-color: #5e5373;
+    box-shadow: 0 5px 0px #3c354a;
+    transition-duration: 0.5s, 100ms, 100ms;
+    transition-property: background-color, top, box-shadow;
+    transition-delay: 0s, 0.5s, 0.5s;
+    &:hover {
+        top:2px;
+        box-shadow: 0 3px 0px #3c354a;
+        background-color: #18b5a4;
+    }
+}
+
+.ease {
+    height: 50px;
+    margin-top: 15px;
+    margin-bottom: 3px;
+    border-radius: 10px;
+    background-color: #5e5373;
+    color: #fff;
+    border: 2px solid orange;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-timing-function: ease;
+    transition-duration: 1s;
+    &:hover {
+        width: 500px;
+    }
+}
+
+.ease-in {
+    height: 50px;
+    margin-bottom: 3px;
+    border-radius: 10px;
+    background-color: #5e5373;
+    color: #fff;
+    border: 2px solid orange;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-timing-function: ease-in;
+    transition-duration: 1s;
+    &:hover {
+        width: 500px;
+    }
+}
+
+.ease-out {
+    height: 50px;
+    margin-bottom: 3px;
+    border-radius: 10px;
+    background-color: #5e5373;
+    color: #fff;
+    border: 2px solid orange;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-timing-function: ease-out;
+    transition-duration: 1s;
+    &:hover {
+        width: 500px;
+    }
+}
+
+.ease-in-out {
+    height: 50px;
+    margin-bottom: 3px;
+    border-radius: 10px;
+    background-color: #5e5373;
+    color: #fff;
+    border: 2px solid orange;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+    &:hover {
+        width: 500px;
+    }
+}
+
+.linear {
+    height: 50px;
+    margin-bottom: 3px;
+    border-radius: 10px;
+    background-color: #5e5373;
+    color: #fff;
+    border: 2px solid orange;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-timing-function: linear;
+    transition-duration: 1s;
+    &:hover {
+        width: 500px;
+    }
+}
+
+.steps {
+    height: 50px;
+    margin-bottom: 3px;
+    border-radius: 10px;
+    background-color: #5e5373;
+    color: #fff;
+    border: 2px solid orange;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-timing-function: steps(10, start);
+    transition-duration: 1s;
+    &:hover {
+        width: 500px;
+    }
+}
+
+.cubic {
+    height: 50px;
+    margin-bottom: 3px;
+    border-radius: 10px;
+    background-color: #5e5373;
+    color: #fff;
+    border: 2px solid orange;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 1s;
+    &:hover {
+        width: 500px;
+    }
+}
+
+

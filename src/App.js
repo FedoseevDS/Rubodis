@@ -9,6 +9,10 @@ import Children from "./pages/Props/Children/children";
 import Props from "./pages/Props/props";
 import Classname from './pages/Classname/classname';
 import ReactLearn from './pages/React/react';
+import Scss from "./pages/SCSS/scss";
+import SCSSTransitionChannel1 from "./pages/SCSS/Transition/Channel1/transition";
+import AnimationChannel1 from "./pages/React/Component/Animation/Channel1/animation";
+import SCSSAnimationChannel1 from "./pages/SCSS/Animation/animation";
 
 // TODO: почитать про Routes, Route, Link
 
@@ -25,11 +29,15 @@ function App() {
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} /> 
           <Route path='react' element={<ReactLearn />} />
+          <Route path='react/animation' element={<AnimationChannel1 />} />
           <Route path='props' element={<Props />} />
           <Route path="props/fourOptions" element={<PropsChannel1 />} />
           <Route path="props/children" element={<Children />} />
           <Route path='classname' element={<Classname />} />
           <Route path='Array' element={<ArrayChannel1 />} />
+          <Route path='scss' element={<Scss />} />
+          <Route path='scss/transition' element={<SCSSTransitionChannel1 />} />
+          <Route path='scss/animation' element={<SCSSAnimationChannel1 />} />
         </Route>
       </Routes>
     </>

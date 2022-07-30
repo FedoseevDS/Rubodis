@@ -1,0 +1,48 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.content__circle {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    border-radius: 50%;
+    position: relative;
+    // animation-name: black-circle;
+    // animation-duration: 2s;
+    // animation-timing-function: linear;
+    // animation-iteration-count: 1;
+    // animation-delay: 2s;
+    // animation-fill-mode: forwards;
+    animation: black-circle 2s linear infinite alternate 0s forwards, red-circle 3s ease-in infinite alternate 0s forwards;
+}
+
+.content:hover .content__circle {
+    animation-play-state: paused;
+}
+
+@keyframes black-circle {
+    0% {
+        left: 0;
+    }
+    50% {
+        border-radius: 0%;
+    }
+    100% {
+        left: 500px;
+    }
+}
+
+@keyframes red-circle {
+    0% {
+        background-color: blue;
+    }
+    50% {
+        background-color: red;
+    }
+    100% {
+        background-color: gray;
+    }
+}
+

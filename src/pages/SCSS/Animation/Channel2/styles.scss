@@ -1,0 +1,51 @@
+.commonAnimation2 {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.animationBlock {
+    width: 120px;
+    height: 120px;
+    background-color: orangered;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+    font-size: 20px;
+    margin: 100px;
+    animation: turing 10s ease-in 5s infinite alternate;
+    // animation-name: turing; название анимации
+    // animation-duration: 3s; время анимации
+    // animation-timing-function: ease-in; скорость анимации 
+    // animation-delay: 1s; задержка анимации
+    // animation-iteration-count: infinite; количество анимаций
+    // animation-direction: alternate; направление анимации
+    &:hover {
+        animation-play-state: paused;
+    }
+}
+
+@keyframes turing {
+    0% {
+        border-radius: 0 0 0 0;
+        transform: rotate(0deg);
+    }
+    25% {
+        border-radius: 50% 0 0 0;
+        transform: rotate(34deg);
+    }
+    50% {
+        border-radius: 50% 50% 0 0;
+        transform: rotate(90deg);
+    }
+    75% {
+        border-radius: 50% 50% 50% 0;
+        transform: rotate(135deg);
+    }
+    100% {
+        border-radius: 50% 50% 50% 50%;
+        transform: rotate(180deg);
+    }
+}
+

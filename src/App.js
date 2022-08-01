@@ -12,7 +12,8 @@ import ReactLearn from './pages/React/react';
 import Scss from "./pages/SCSS/scss";
 import SCSSTransitionChannel1 from "./pages/SCSS/Transition/Channel1/transition";
 import AnimationChannel1 from "./pages/React/Component/Animation/Channel1/animation";
-import SCSSAnimationChannel1 from "./pages/SCSS/Animation/animation";
+import SCSSAnimationChannel1 from "./pages/SCSS/Animation/Channel1/animation";
+import SCSSAnimationChannel2 from "./pages/SCSS/Animation/Channel2/animation";
 
 // TODO: почитать про Routes, Route, Link
 
@@ -37,7 +38,8 @@ function App() {
           <Route path='Array' element={<ArrayChannel1 />} />
           <Route path='scss' element={<Scss />} />
           <Route path='scss/transition' element={<SCSSTransitionChannel1 />} />
-          <Route path='scss/animation' element={<SCSSAnimationChannel1 />} />
+          <Route path='scss/animation1' element={<SCSSAnimationChannel1 />} />
+          <Route path='scss/animation2' element={<SCSSAnimationChannel2 />} />
         </Route>
       </Routes>
     </>
